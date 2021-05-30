@@ -1,38 +1,27 @@
-import React, { useEffect, useState } from "react";
-import ReactLoading from "react-loading";
+import ClipLoader from "react-spinners/ClipLoader";
+import React from "react";
+import { useState } from "react";
+import { css } from "@emotion/react";
 
-function PreLoader() {
-  const [data, setData] = useState([]);
-  const [done, setDone] = useState(undefined);
+// Can be a string as well. Need to ensure each key-value pair ends with ;
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
 
-  useEffect(() => {
-    setTimeout(() => {
-      fetch("https://jsonplaceholder.typicode.com/posts")
-        .then((response) => response.json())
-        .then((json) => {
-          console.log(json);
-          setData(json);
-          setDone(true);
-        });
-    }, 2000);
-  }, []);
+function App() {
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("#000000");
 
   return (
-    <>
-      {!done ? (
-        <ReactLoading
-          type={"bars"}
-          color={"#03fc4e"}
-          height={100}
-          width={100}
-          align={center}
-        />
-      ) : (
-        <ul>
-        </ul>
-      )}
-    </>
+    <div className="sweet-loading">
+      <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
+      <input value={color} onChange={(input) => setColor(input.target.value)} placeholder="Color of the loader" />
+
+      <ClipLoader color={color} loading={loading} css={override} size={150} />
+    </div>
   );
 }
 
-export default PreLoader;
+export default App;

@@ -4,9 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Navbar, Products, Cart, Checkout } from './components';
 import { commerce } from './lib/commerce';
-import PreLoader from './components/PreLoader.js'
-import PreLoader2 from './components/PreLoader2.js'
-
+import Loading from './components/loading.js'
+import logo from "./logo.jpeg";
 
 const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -76,8 +75,7 @@ const App = () => {
 
   return (
     <Router>
-      <PreLoader />
-      {/* <PreLoader2 /> */}
+      <Loading />
       <div style={{ display: 'flex' }}>
         <CssBaseline />
         <Navbar totalItems={cart.total_items} handleDrawerToggle={handleDrawerToggle} />

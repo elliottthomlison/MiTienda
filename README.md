@@ -6,6 +6,6 @@ This project was bootstrapped with Create React App.
 
 To duplicate this project feel free to Git Clone it and then npm install the dependencies. 
 
-## Check 
+## MiTienda
 
 ![Alt Text](MiTienda.gif)

@@ -4,7 +4,7 @@ MiTienda is an example of an e-commerce app that allows users to select from the
 
 ## Available Scripts
 
-To duplicate this project feel free to Git Clone it and then npm install the dependencies. 
+To duplicate this project feel free to Git Clone it and then `npm install` the dependencies. 
 
 ## Final Product
 

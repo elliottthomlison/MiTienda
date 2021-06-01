@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# MiTienda
 
-This project was bootstrapped with Create React App. 
+MiTienda is an example of a ecommerce app that allows users to select from the available options, add them to their cart, and process the purchase via Stripe. The app was built using React, Material-UI, Bootstrap, and with the animations coming from LottieFiles.
 
 ## Available Scripts
 

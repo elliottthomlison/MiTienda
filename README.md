@@ -6,6 +6,7 @@ MiTienda is an example of an e-commerce app that allows users to select from the
 
 ![Alt Text](MiTienda.gif)
 
-## Available Scripts
+## Setup
 
-To duplicate this project feel free to `git clone` it and then `npm install` the dependencies. 
+- To duplicate this project feel free to `git clone` it and then `npm install` the dependencies. 
+
